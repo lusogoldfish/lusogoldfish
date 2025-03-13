@@ -19,9 +19,9 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #545454; /* Color for headings, subheadings and title throughout the website */
+  --background-color: #0A3981; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e96b56; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #e96b56; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -151,7 +151,7 @@ h6 {
 }
 
 .header .topbar {
-  background-color: var(--background-color);
+  background-color: #091057;
   height: 40px;
   padding: 0;
   font-size: 14px;
@@ -208,8 +208,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 100px;
+
 }
 
 .header .logo h1 {
@@ -464,13 +464,13 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #091057;
   font-size: 14px;
   position: relative;
 }
 
 .footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: color-mix(in srgb, #091057, transparent 95%);
   padding: 50px 0;
 }
 
@@ -483,7 +483,7 @@ h6 {
   margin-bottom: 15px;
   padding: 6px 8px;
   position: relative;
-  background-color: var(--surface-color);
+  background-color: #091057;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   display: flex;
   transition: 0.3s;
@@ -498,7 +498,7 @@ h6 {
   border: 0;
   padding: 4px 8px;
   width: 100%;
-  background-color: var(--surface-color);
+  background-color: #091057;
   color: var(--background-color);
 }
 
@@ -511,14 +511,14 @@ h6 {
   font-size: 16px;
   padding: 0 20px;
   margin: -7px -9px -7px 0;
-  background: var(--accent-color);
+  background: #091057;
   color: var(--contrast-color);
   transition: 0.3s;
   border-radius: 50px;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, #091057, transparent 20%);
 }
 
 .footer .footer-top {
@@ -532,7 +532,7 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, #438bf8, transparent 50%);
   font-size: 16px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-right: 10px;
@@ -971,7 +971,7 @@ section,
 }
 
 .hero .featured-item {
-  background-color: var(--surface-color);
+  background-color: #091057;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   transition: all 0.3s ease-in-out;

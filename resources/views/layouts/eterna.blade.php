@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Eterna Bootstrap Template</title>
+    <title>LusoGoldFish | Dá vida ao teu Aquário!</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{asset('eterna/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('eterna/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <link href="{{asset('eterna/img/favicon.icon')}}" rel="icon">
+    <link href="{{asset('eterna/img/favicon.icon')}}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -46,14 +46,12 @@
             <div class="container d-flex justify-content-center justify-content-md-between">
                 <div class="contact-info d-flex align-items-center">
                     <i class="bi bi-envelope d-flex align-items-center"><a
-                            href="mailto:contact@example.com">contact@example.com</a></i>
-                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+                            href="mailto:contact@example.com">contacto@lusogoldfish.pt</a></i>
+                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>+351 263 500 310</span></i>
                 </div>
                 <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
                     <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div><!-- End Top Bar -->
@@ -61,41 +59,22 @@
         <div class="branding">
 
             <div class="container position-relative d-flex align-items-center justify-content-between">
-                <a href="index.html" class="logo d-flex align-items-center">
+                <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <!-- <img src="{{asset('eterna/img/logo.png')}}" alt=""> -->
-                    <h1 class="sitename">LusoGoldFish<br></h1>
+                    <img src="{{asset('eterna/img/logo.png')}}" alt="" style="width = 100px"> 
+                    <!-- <h1 class="sitename">LusoGoldFish<br></h1> -->
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="about.html">Sobre</a></li>
+                        <li><a href="services.html">Serviços</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="team.html">Equipa</a></li>
+                        <li><a href="pricing.html">Preços</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Dropdown 1</a></li>
-                                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="#">Deep Dropdown 1</a></li>
-                                        <li><a href="#">Deep Dropdown 2</a></li>
-                                        <li><a href="#">Deep Dropdown 3</a></li>
-                                        <li><a href="#">Deep Dropdown 4</a></li>
-                                        <li><a href="#">Deep Dropdown 5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Dropdown 2</a></li>
-                                <li><a href="#">Dropdown 3</a></li>
-                                <li><a href="#">Dropdown 4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -114,66 +93,27 @@
 
     <footer id="footer" class="footer position-relative dark-background">
 
-        <div class="footer-newsletter">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-6">
-                        <h4>Join Our Newsletter</h4>
-                        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-                        <form action="forms/newsletter.php" method="post" class="php-email-form">
-                            <div class="newsletter-form"><input type="email" name="email"><input type="submit"
-                                    value="Subscribe"></div>
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">Eterna</span>
+                    <a href="/" class="d-flex align-items-center">
+                        <span class="sitename" style="color: #e96b56">LusoGoldFish</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p>Rua do Parque, 2120-092</p>
+                        <p> Salvaterra de Magos</p>
+                        <p class="mt-3"><strong>Tel:</strong> <span>+351 263 500 310</span></p>
+                        <p><strong>Email:</strong> <span>contacto@lusogoldfish.pt</span></p>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-                    </ul>
-                </div>
 
                 <div class="col-lg-4 col-md-12">
-                    <h4>Follow Us</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <h4 style="color: #e96b56">Segue-nos!</h4>
+                    <p>Acompanha as nossas novidades, dicas e promoções. Junta-te à comunidade LusoGolFish e traz mais cor ao teu aquário!</p>
                     <div class="social-links d-flex">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>
                         <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
