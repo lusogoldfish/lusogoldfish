@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Eterna Bootstrap Template</title>
+    <title>Site - LusoGoldFish</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{asset('eterna/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('eterna/img/favicon1.png')}}" rel="icon">
     <link href="{{asset('eterna/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -63,39 +63,20 @@
             <div class="container position-relative d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <!-- <img src="{{asset('eterna/img/logo.png')}}" alt=""> -->
+                    <!-- <img src="{{asset('eterna/img/favicon2.png')}}" alt=""> -->
                     <h1 class="sitename">LusoGoldFish<br></h1>
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">Sobre</a></li>
+                        <li><a href="services.html">Serviços</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="team.html">Equipa</a></li>
+                        <li><a href="pricing.html">Preços</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Dropdown 1</a></li>
-                                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="#">Deep Dropdown 1</a></li>
-                                        <li><a href="#">Deep Dropdown 2</a></li>
-                                        <li><a href="#">Deep Dropdown 3</a></li>
-                                        <li><a href="#">Deep Dropdown 4</a></li>
-                                        <li><a href="#">Deep Dropdown 5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Dropdown 2</a></li>
-                                <li><a href="#">Dropdown 3</a></li>
-                                <li><a href="#">Dropdown 4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
