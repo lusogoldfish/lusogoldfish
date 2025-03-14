@@ -29,6 +29,11 @@
     <!-- Main CSS File -->
     <link href="{{asset('eterna/css/main.css')}}" rel="stylesheet">
 
+
+    @vite('resources/css/app.css')
+
+    
+
     <!-- =======================================================
   * Template Name: Eterna
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
