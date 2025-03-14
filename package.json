@@ -15,7 +15,7 @@
     "husky": "^9.1.7",
     "laravel-vite-plugin": "^1.2.0",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.1.0",
+    "tailwindcss": "^3.4.17",
     "vite": "^6.2.1"
   },
   "name": "lusogoldfish",
@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/lusogoldfish/lusogoldfish/issues"
   },
-  "homepage": "https://github.com/lusogoldfish/lusogoldfish#readme"
+  "homepage": "https://github.com/lusogoldfish/lusogoldfish#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.14"
+  }
 }
