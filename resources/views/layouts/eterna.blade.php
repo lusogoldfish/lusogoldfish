@@ -9,8 +9,8 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{asset('eterna/img/favicon.icon')}}" rel="icon">
-    <link href="{{asset('eterna/img/favicon.icon')}}" rel="apple-touch-icon">
+    <link href="{{asset('eterna/img/favicon.png')}}" rel="icon">
+    <link href="{{asset('eterna/img/favicon.png')}}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -19,6 +19,8 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+        @vite('resources/css/app.css')
+
     <!-- Vendor CSS Files -->
     <link href="{{asset('eterna/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('eterna/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
@@ -26,13 +28,15 @@
     <link href="{{asset('eterna/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{asset('eterna/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
 
+
+    @vite('resources/css/app.css')
+
     <!-- Main CSS File -->
     <link href="{{asset('eterna/css/main.css')}}" rel="stylesheet">
 
 
-    @vite('resources/css/app.css')
 
-    
+
 
     <!-- =======================================================
   * Template Name: Eterna
@@ -66,20 +70,20 @@
             <div class="container position-relative d-flex align-items-center justify-content-between">
                 <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <img src="{{asset('eterna/img/logo.png')}}" alt="" style="width = 100px"> 
+                    <img src="{{asset('eterna/img/logo.png')}}" alt="" style="width = 100px">
                     <!-- <h1 class="sitename">LusoGoldFish<br></h1> -->
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a href="/" class="active">Home</a></li>
-                        <li><a href="about.html">Sobre</a></li>
-                        <li><a href="services.html">Serviços</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="team.html">Equipa</a></li>
-                        <li><a href="pricing.html">Preços</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contactos.html">Contactos</a></li>
+                        <li><a href="/sobre">Sobre</a></li>
+                        <li><a href="/">Serviços</a></li>
+                        <li><a href="/">Portfolio</a></li>
+                        <li><a href="/">Equipa</a></li>
+                        <li><a href="/">Preços</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Contactos</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
