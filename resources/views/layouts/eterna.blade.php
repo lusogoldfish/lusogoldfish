@@ -31,6 +31,11 @@
     <!-- Main CSS File -->
     <link href="{{asset('eterna/css/main.css')}}" rel="stylesheet">
 
+
+    @vite('resources/css/app.css')
+
+    
+
     <!-- =======================================================
   * Template Name: Eterna
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
@@ -70,13 +75,13 @@
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a href="/" class="active">Home</a></li>
-                        <li><a href="about.html">Sobre</a></li>
-                        <li><a href="services.html">Serviços</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="team.html">Equipa</a></li>
-                        <li><a href="pricing.html">Preços</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contactos.html">Contactos</a></li>
+                        <li><a href="/">Sobre</a></li>
+                        <li><a href="/">Serviços</a></li>
+                        <li><a href="/">Portfolio</a></li>
+                        <li><a href="/">Equipa</a></li>
+                        <li><a href="/">Preços</a></li>
+                        <li><a href="/">Blog</a></li>
+                        <li><a href="/">Contactos</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
