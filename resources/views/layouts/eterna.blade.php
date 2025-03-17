@@ -28,13 +28,15 @@
     <link href="{{asset('eterna/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{asset('eterna/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
 
+
+    @vite('resources/css/app.css')
+
     <!-- Main CSS File -->
     <link href="{{asset('eterna/css/main.css')}}" rel="stylesheet">
 
 
-    @vite('resources/css/app.css')
 
-    
+
 
     <!-- =======================================================
   * Template Name: Eterna
@@ -68,14 +70,14 @@
             <div class="container position-relative d-flex align-items-center justify-content-between">
                 <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <img src="{{asset('eterna/img/logo.png')}}" alt="" style="width = 100px"> 
+                    <img src="{{asset('eterna/img/logo.png')}}" alt="" style="width = 100px">
                     <!-- <h1 class="sitename">LusoGoldFish<br></h1> -->
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a href="/" class="active">Home</a></li>
-                        <li><a href="/">Sobre</a></li>
+                        <li><a href="/sobre">Sobre</a></li>
                         <li><a href="/">Serviços</a></li>
                         <li><a href="/">Portfolio</a></li>
                         <li><a href="/">Equipa</a></li>
