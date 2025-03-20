@@ -82,7 +82,7 @@
                         <li><a href="/">Portfolio</a></li>
                         <li><a href="/">Equipa</a></li>
                         <li><a href="/">Preços</a></li>
-                        <li><a href="/">Blog</a></li>
+                        <li><a href="/login">Entrar</a></li>
                         <li><a href="/">Contactos</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
