@@ -30,8 +30,12 @@
                     background-position: 0 0;
                 }
                 100% {
-                    background-position: 100% 100%;
+                    background-position: 60% 60%;
                 }
+            }
+
+            body {
+                min-height: 100vh;
             }
 
             /* Card de login */
@@ -168,9 +172,12 @@
                 </div>
 
                 <!-- Lembrar-me -->
-                <div class="form-check mb-3">
-                    <input id="remember_me" type="checkbox" class="form-check-input" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                    <label for="remember_me" class="form-check-label">Lembrar-me</label>
+                <div class="form-check mb-3" style="display: flex; align-items: center;">
+                    <input id="remember_me" type="checkbox" class="form-check-input" name="remember" {{ old('remember') ? 'checked' : '' }}
+                           style="width: 18px; height: 18px; margin-right: 8px; accent-color: #007bff; cursor: pointer;">
+                    <label for="remember_me" class="form-check-label" style="color: #333; font-size: 14px; cursor: pointer; margin-bottom: 0;">
+                        Lembrar-me
+                    </label>
                 </div>
 
                 <!-- Links de Ação -->

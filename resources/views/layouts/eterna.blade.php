@@ -9,8 +9,8 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{asset('eterna/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('eterna/img/favicon.png')}}" rel="apple-touch-icon">
+    <link href="{{ asset('eterna/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('eterna/img/favicon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -19,20 +19,20 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-        @vite('resources/css/app.css')
+    @vite('resources/css/app.css')
 
     <!-- Vendor CSS Files -->
-    <link href="{{asset('eterna/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('eterna/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-    <link href="{{asset('eterna/vendor/aos/aos.css')}}" rel="stylesheet">
-    <link href="{{asset('eterna/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-    <link href="{{asset('eterna/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('eterna/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('eterna/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('eterna/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('eterna/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('eterna/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
 
 
     @vite('resources/css/app.css')
 
     <!-- Main CSS File -->
-    <link href="{{asset('eterna/css/main.css')}}" rel="stylesheet">
+    <link href="{{ asset('eterna/css/main.css') }}" rel="stylesheet">
 
 
 
@@ -70,100 +70,123 @@
             <div class="container position-relative d-flex align-items-center justify-content-between">
                 <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
-                    <img src="{{asset('eterna/img/logo.png')}}" alt="" style="width = 100px">
+                    <img src="{{ asset('eterna/img/logo.png') }}" alt="" style="width = 100px">
                     <!-- <h1 class="sitename">LusoGoldFish<br></h1> -->
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/sobre">Sobre</a></li>
                         <li><a href="/">Serviços</a></li>
                         <li><a href="/">Portfolio</a></li>
                         <li><a href="/">Equipa</a></li>
                         <li><a href="/">Preços</a></li>
-                        <li><a href="/login">Entrar</a></li>
-                        <li><a href="/">Contactos</a></li>
-                    </ul>
-                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                </nav>
+                        <li><a href="/suporte">Suporte</a></li>
 
-            </div>
+                        <li>
+                            @auth
+                            @if(Auth::user()->role === 'admin') <!-- Verifica se o usuário tem role de admin -->
+                                <a href="/dashboard">Dashboard</a>
+                            @endif
+                        @endauth
 
-        </div>
+                        </li>
+                        <li>
+                            @auth
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    this.closest('form').submit();">Logout</a>
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}">Login</a>
+                            @endauth
+                        </li>
+                        @guest
 
-    </header>
+                        @endguest
+                        </ul>
+                        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                    </nav>
 
-    <main class="main">
-
-        {{ $slot }}
-
-    </main>
-
-    <footer id="footer" class="footer position-relative dark-background">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="/" class="d-flex align-items-center">
-                        <span class="sitename" style="color: #e96b56">LusoGoldFish</span>
-                    </a>
-                    <div class="footer-contact pt-3">
-                        <p>Rua do Parque, 2120-092</p>
-                        <p> Salvaterra de Magos</p>
-                        <p class="mt-3"><strong>Tel:</strong> <span>+351 263 500 310</span></p>
-                        <p><strong>Email:</strong> <span>contacto@lusogoldfish.pt</span></p>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-12">
-                    <h4 style="color: #e96b56">Segue-nos!</h4>
-                    <p>Acompanha as nossas novidades, dicas e promoções. Junta-te à comunidade LusoGolFish e traz mais cor ao teu aquário!</p>
-                    <div class="social-links d-flex">
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                    </div>
                 </div>
 
             </div>
-        </div>
 
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">Eterna</strong> <span>All Rights Reserved</span>
-            </p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </header>
+
+        <main class="main">
+
+            {{ $slot }}
+
+        </main>
+
+        <footer id="footer" class="footer position-relative dark-background">
+
+            <div class="container footer-top">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <a href="/" class="d-flex align-items-center">
+                            <span class="sitename" style="color: #e96b56">LusoGoldFish</span>
+                        </a>
+                        <div class="footer-contact pt-3">
+                            <p>Rua do Parque, 2120-092</p>
+                            <p> Salvaterra de Magos</p>
+                            <p class="mt-3"><strong>Tel:</strong> <span>+351 263 500 310</span></p>
+                            <p><strong>Email:</strong> <span>contacto@lusogoldfish.pt</span></p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-12">
+                        <h4 style="color: #e96b56">Segue-nos!</h4>
+                        <p>Acompanha as nossas novidades, dicas e promoções. Junta-te à comunidade LusoGolFish e traz mais
+                            cor ao teu aquário!</p>
+                        <div class="social-links d-flex">
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-    </footer>
+            <div class="container copyright text-center mt-4">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Eterna</strong> <span>All Rights Reserved</span>
+                </p>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you've purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+        </footer>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="{{asset('eterna/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('eterna/vendor/php-email-form/validate.js')}}"></script>
-    <script src="{{asset('eterna/vendor/aos/aos.js')}}"></script>
-    <script src="{{asset('eterna/vendor/swiper/swiper-bundle.min.js')}}"></script>
-    <script src="{{asset('eterna/vendor/purecounter/purecounter_vanilla.js')}}"></script>
-    <script src="{{asset('eterna/vendor/waypoints/noframework.waypoints.js')}}"></script>
-    <script src="{{asset('eterna/vendor/glightbox/js/glightbox.min.js')}}"></script>
-    <script src="{{asset('eterna/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
-    <script src="{{asset('eterna/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+        <!-- Preloader -->
+        <div id="preloader"></div>
 
-    <!-- Main JS File -->
-    <script src="{{asset('eterna/js/main.js')}}"></script>
+        <!-- Vendor JS Files -->
+        <script src="{{ asset('eterna/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/php-email-form/validate.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/aos/aos.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/swiper/swiper-bundle.min.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/waypoints/noframework.waypoints.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/glightbox/js/glightbox.min.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ asset('eterna/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
-</body>
+        <!-- Main JS File -->
+        <script src="{{ asset('eterna/js/main.js') }}"></script>
 
-</html>
+    </body>
+
+    </html>
