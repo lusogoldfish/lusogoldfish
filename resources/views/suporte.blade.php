@@ -20,7 +20,7 @@
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <form action="/enviar-suporte" method="POST" class="shadow p-4 rounded bg-light">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nome Completo</label>
+                            <label for="name" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">

@@ -31,11 +31,18 @@
                 }
                 100% {
                     background-position: 60% 60%;
+                    opacity: 0.8;
+                    transition: background-position 2s, opacity 1s;
                 }
             }
 
             body {
                 min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 20px;
             }
 
             /* Card de login */
@@ -47,6 +54,7 @@
                 width: 100%;
                 max-width: 400px;
                 text-align: center;
+
             }
 
             .login-card h3 {
