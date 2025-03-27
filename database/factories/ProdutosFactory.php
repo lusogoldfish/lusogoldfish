@@ -9,9 +9,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ProdutosFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = \App\Models\Produtos::class;
+
+    public function definition()
+    {
+        return [
+            'nome' => $this->faker->word,
+            'descricao' => $this->faker->sentence,
+            'preco' => $this->faker->randomFloat(2, 0, 8),
+            'categoria' => $this->faker->word,
+            'imagem' => $this->faker->word,
+        ];
+    }
 }
