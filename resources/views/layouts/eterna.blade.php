@@ -10,14 +10,12 @@
 
     <!-- Favicons -->
     <link href="{{ asset('eterna/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('eterna/img/favicon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset(path: 'eterna/img/favicon.png') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     @vite('resources/css/app.css')
 
@@ -28,12 +26,8 @@
     <link href="{{ asset('eterna/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('eterna/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
 
-
-    @vite('resources/css/app.css')
-
     <!-- Main CSS File -->
     <link href="{{ asset('eterna/css/main.css') }}" rel="stylesheet">
-
 
 
 
@@ -81,7 +75,7 @@
                         <li><a href="/">Serviços</a></li>
                         <li><a href="/">Portfolio</a></li>
                         <li><a href="/">Equipa</a></li>
-                        <li><a href="/">Preços</a></li>
+                        <a href="{{ route('produtos.criar') }}" class="btn btn-primary">Adicionar Novo Produto</a>
                         <li><a href="/suporte">Suporte</a></li>
 
                         <li>
@@ -167,8 +161,7 @@
         </footer>
 
         <!-- Scroll Top -->
-        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-                class="bi bi-arrow-up-short"></i></a>
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
         <!-- Preloader -->
         <div id="preloader"></div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -43,5 +44,11 @@ Route::get('/suporte', function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(AdminMiddleware::class);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/', [ProdutoController::class, 'index'])->name('welcome');
+Route::post('/produtos', [ProdutoController::class, 'store'])->name('produtos.store');
+
+Route::get('/produtos/criar', [ProdutoController::class, 'create'])->name('produtos.criar');
+Route::get('/produtos/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
 
 require __DIR__.'/auth.php';
