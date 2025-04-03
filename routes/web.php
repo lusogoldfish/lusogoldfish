@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuporteController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -50,5 +51,7 @@ Route::post('/produtos', [ProdutoController::class, 'store'])->name('produtos.st
 
 Route::get('/produtos/criar', [ProdutoController::class, 'create'])->name('produtos.criar');
 Route::get('/produtos/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
+
+Route::post('/enviar-suporte', action: [SuporteController::class, 'enviar'])->name('suporte.enviar');
 
 require __DIR__.'/auth.php';
