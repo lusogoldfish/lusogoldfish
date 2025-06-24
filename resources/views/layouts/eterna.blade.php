@@ -122,7 +122,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-4 col-md-6 footer-about">
                         <a href="/" class="d-flex align-items-center">
-                            <span class="sitename" style="color: #e96b56">LusoGoldFish</span>
+                            <span class="sitename" style="color:rgb(238, 106, 83)">LusoGoldFish</span>
                         </a>
                         <div class="footer-contact pt-3">
                             <p>Rua do Parque, 2120-092</p>
