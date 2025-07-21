@@ -2,25 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produtos;
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
     public function index()
     {
-        $produtos = Produtos::all();
+        $produtos = Produto::all();
 
         return view('welcome', compact('produtos'));
     }
 
     public function create()
     {
+
         return view('produtos.criar');
     }
 
     public function store(Request $request)
     {
+
         $request->validate([
             'nome' => 'required|string|max:255',
             'descricao' => 'required|string',
@@ -32,7 +34,7 @@ class ProdutoController extends Controller
             'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $produto = new Produtos;
+        $produto = new Produto;
         $produto->nome = $request->input('nome');
         $produto->descricao = $request->input('descricao');
         $produto->preco = $request->input('preco');
@@ -50,5 +52,12 @@ class ProdutoController extends Controller
         $produto->save();
 
         return redirect()->route('welcome')->with('success', 'Produto adicionado com sucesso!');
+    }
+
+    public function show($id)
+    {
+        $produto = Produto::findOrFail($id);
+
+        return view('produtos.show', compact('produto'));
     }
 }

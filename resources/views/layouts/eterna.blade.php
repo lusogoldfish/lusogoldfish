@@ -72,10 +72,12 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/sobre">Sobre</a></li>
-                        <li><a href="/">Serviços</a></li>
-                        <li><a href="/">Portfolio</a></li>
+                        <li><a href="/servicos">Serviços</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/">Equipa</a></li>
-                        <a href="{{ route('produtos.criar') }}" class="btn btn-primary">Adicionar Novo Produto</a>
+                        @auth
+                            <a href="{{ route('produtos.criar') }}" class="btn btn-primary">Adicionar Novo Produto</a>  
+                        @endauth
                         <li><a href="/suporte">Suporte</a></li>
 
                         <li>
@@ -154,7 +156,7 @@
                     <!-- You can delete the links only if you've purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    Designed by <a href="https://bootstrapmade.com/">Lusogoldfish</a>
                 </div>
             </div>
 

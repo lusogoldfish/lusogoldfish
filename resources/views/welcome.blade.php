@@ -5,7 +5,6 @@
 
 
         <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
             <div class="carousel-item active">
                 <img src="eterna/img/hero-carousel/hero-carousel-1.jpg" alt="">
                 <div class="carousel-container">
@@ -37,7 +36,7 @@
 
         </div>
 
-        <div class="featured container">
+        <div class="featured containSer">
 
             <div class="row gy-4">
 
@@ -75,7 +74,7 @@
 
 
 
-<section id="produtos" class="bg-white py-16">
+    <section id="produtos" class="bg-white py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">💙 Os nossos produtos</h2>
 
@@ -85,7 +84,7 @@
                         <img src="{{ asset('storage/' . $produto->imagem) }}" alt="{{ $produto->nome }}" class="w-full h-48 object-cover group-hover:opacity-75">
                         <div class="p-4">
                             <h3 class="text-lg font-semibold text-gray-800">
-                                <a href="{{ $produto->nome }}</a>
+                                <a href="{{ $produto->nome }}">{{ $produto->nome }}</a>
                             </h3>
                             <p class="text-sm text-gray-500 mb-2">{{ Str::limit($produto->descricao, 100) }}</p>
                             <p class="text-lg font-semibold text-gray-900">{{ number_format($produto->preco, 2, ',', '.') }} €</p>
@@ -104,8 +103,8 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section>      
 
-
+    
 
 </x-eterna-layout>

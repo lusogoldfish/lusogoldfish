@@ -1,57 +1,60 @@
-<?php
+    <?php
 
-use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SuporteController;
-use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProdutoController::class, 'index'])->name('welcome');
 
-// Definindo a rota para o dashboard
-Route::get('/dashboard', [AdminDashboardController::class, 'index'])
-    ->middleware('auth'); // Somente usuários autenticados podem acessar
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Rota para o dashboard usando o controller
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password.update');
 });
 
+require __DIR__.'/auth.php';
+
+// Rota para a página "sobre"
 Route::get('/sobre', function () {
     return view('sobre');
 });
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
-    Route::get('/create-admin', [AdminDashboardController::class, 'createAdmin'])->name('create-admin');
-    Route::post('/store-admin', [AdminDashboardController::class, 'storeAdmin'])->name('store-admin');
-    Route::get('/create-product', [AdminDashboardController::class, 'createProduct'])->name('create-product');
-    Route::post('/store-product', [AdminDashboardController::class, 'storeProduct'])->name('store-product');
+// Rota para a página "serviços"
+Route::get('/servicos', function () {
+    return view('servicos');
 });
 
+// Rotas para portfolio
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/portfolio/{id}', [PortfolioController::class, 'show'])->name('portfolio.show');
+
+// Rota para a página "equipa"
+Route::get('/equipa', function () {
+    return view('equipa');
+});
+
+// Rota para a página "suporte"
 Route::get('/suporte', function () {
     return view('suporte');
-});
+})->name('suporte');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(AdminMiddleware::class);
+// Rota para processar o formulário de suporte
+Route::post('/suporte', [SuporteController::class, 'store'])->name('suporte.store');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// Rotas para produtos - só para admin
+Route::get('/produtos/criar', [ProdutoController::class, 'create'])
+    ->middleware('auth')
+    ->name('produtos.criar');
 
-Route::get('/', [ProdutoController::class, 'index'])->name('welcome');
-Route::post('/produtos', [ProdutoController::class, 'store'])->name('produtos.store');
-
-Route::get('/produtos/criar', [ProdutoController::class, 'create'])->name('produtos.criar');
-Route::get('/produtos/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
-
-Route::post('/enviar-suporte', action: [SuporteController::class, 'enviar'])->name('suporte.enviar');
-
-require __DIR__.'/auth.php';
+Route::post('/produtos', [ProdutoController::class, 'store'])
+    ->middleware('auth')
+    ->name('produtos.store');
