@@ -44,7 +44,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <form action="{{ route('suporte.enviar') }}" method="POST" class="shadow-custom p-4 rounded bg-white">
+                    <form action="" method="POST" class="shadow-custom p-4 rounded bg-white">
                         @csrf <!-- Token CSRF do Laravel para segurança -->
 
                         <!-- Nome -->

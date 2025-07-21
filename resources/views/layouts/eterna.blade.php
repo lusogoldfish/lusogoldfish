@@ -53,8 +53,7 @@
                     <i class="bi bi-phone d-flex align-items-center ms-4"><span>+351 263 500 310</span></i>
                 </div>
                 <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/lusogoldfishpt/" class="instagram"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
         </div><!-- End Top Bar -->
@@ -74,7 +73,6 @@
                         <li><a href="/sobre">Sobre</a></li>
                         <li><a href="/servicos">Serviços</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
-                        <li><a href="/">Equipa</a></li>
                         @auth
                             <a href="{{ route('produtos.criar') }}" class="btn btn-primary">Adicionar Novo Produto</a>  
                         @endauth
@@ -140,7 +138,6 @@
                         <p>Acompanha as nossas novidades, dicas e promoções. Junta-te à comunidade LusoGolFish e traz mais
                             cor ao teu aquário!</p>
                         <div class="social-links d-flex">
-                            <a href=""><i class="bi bi-facebook"></i></a>
                             <a href="https://www.instagram.com/lusogoldfishpt/"><i class="bi bi-instagram"></i></a>
                         </div>
                     </div>
