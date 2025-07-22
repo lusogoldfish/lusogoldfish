@@ -43,7 +43,7 @@
                 <div class="col-lg-6">
                     <div class="product-info">
                         <div class="mb-3">
-                            <span class="badge px-3 py-2" style="background-color: #e96b56; font-size: 0.9rem;">{{ $produto['tipo'] }}</span>
+                            <span class="badge px-3 py-2" style="background-color: #e96b56; color: #ffff;font-size: 0.9rem;">{{ $produto['tipo'] }}</span>
                             @if($produto['stock'])
                                 <span class="badge bg-success px-3 py-2 ms-2" style="font-size: 0.9rem;">Em Stock</span>
                             @else
@@ -51,14 +51,14 @@
                             @endif
                         </div>
 
-                        <h1 class="display-5 fw-bold mb-3" style="color: #2c4964;">{{ $produto['nome'] }}</h1>
+                        <h1 class="display-5 fw-bold mb-3" style="color: #ffff;">{{ $produto['nome'] }}</h1>
                         
                         <div class="price mb-4">
                             <span class="h2 fw-bold" style="color: #e96b56;">€{{ number_format($produto['preco'], 2, ',', '.') }}</span>
                         </div>
 
-                        <div class="description mb-4">
-                            <p class="lead text-muted">{{ $produto['descricao'] }}</p>
+                        <div class="description mb-4" style="color: #ffff;">
+                            <p class="lead text">{{ $produto['descricao'] }}</p>
                         </div>
 
                         <!-- Botões de Ação -->
@@ -86,7 +86,7 @@
                         </div>
 
                         <!-- Informações de Contacto -->
-                        <div class="contact-info p-4 rounded" style="background-color: #f8f9fa;">
+                        <div class="contact-info p-4 rounded" style="background-color: #f8f9fa; color: #000000">
                             <h6 class="fw-bold mb-3" style="color: #2c4964;">Informações de Contacto</h6>
                             <div class="row">
                                 <div class="col-12 mb-2">

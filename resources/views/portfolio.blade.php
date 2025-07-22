@@ -52,7 +52,7 @@
                                 <span class="badge position-absolute top-0 start-0 m-2" style="background-color: {{ $produto['categoria'] === 'peixes' ? '#007bff' : ($produto['categoria'] === 'filtros' ? '#28a745' : ($produto['categoria'] === 'iluminacao' ? '#ffc107' : ($produto['categoria'] === 'aquecedores' ? '#dc3545' : ($produto['categoria'] === 'bombas' ? '#20c997' : '#6f42c1')))) }};">{{ $produto['tipo'] }}</span>
                             </div>
                             <div class="card-body p-3">
-                                <h6 class="card-title mb-2" style="color: #2c4964;">{{ $produto['nome'] }}</h6>
+                                <h6 class="card-title mb-2" style="color: #1e3041;">{{ $produto['nome'] }}</h6>
                                 <p class="card-text small text-muted mb-2">{{ Str::limit($produto['descricao'], 80) }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="fw-bold" style="color: #e96b56;">€{{ number_format($produto['preco'], 2, ',', '.') }}</span>
@@ -107,7 +107,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-5" style="background: linear-gradient(135deg, #e96b56 0%, #d35202 100%); color: white;">
+    <section class="py-5" style="background: linear-gradient(135deg, #e96b56 0%, #d35202 100%); color: rgb(219, 186, 186);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
